@@ -65,14 +65,14 @@ animations = [{
 radius = 47.0956
 
 [node name="player" type="Area2D"]
-position = Vector2(2, -1)
+position = Vector2(206, 167)
 script = ExtResource("1_opo22")
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, 3)
 scale = Vector2(0.955078, 1.03906)
 sprite_frames = SubResource("SpriteFrames_u51tk")
-animation = &"move_up"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="collision" type="CollisionShape2D" parent="."]
