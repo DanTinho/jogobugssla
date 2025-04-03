@@ -2,7 +2,8 @@ extends Area2D
 
 const SPEED := 400
 @onready var screen_size = get_viewport_rect().size
-@onready var anim: AnimatedSprite2D = $anim
+@onready var anim = $anim
+@onready var collision = $collision
 
 
 func _ready():
