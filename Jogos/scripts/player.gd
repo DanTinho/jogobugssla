@@ -15,7 +15,22 @@ func _process(delta):
 	
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * SPEED
+	
+	if velocity.x != 0:
+		anim.play("move")
+	elif velocity.y > 0:
+		anim.play("move_up")
+	elif velocity.y < 0:
+		anim.play("move_down")
+	else:
+		anim.play("idle")
 		
+	if velocity.x > 0:
+		anim.flip_h = false
+	else:
+		anim.flip_h = true
+		
+	
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screen_size)
 	
